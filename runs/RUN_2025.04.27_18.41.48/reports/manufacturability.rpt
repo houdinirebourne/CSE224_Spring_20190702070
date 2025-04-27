@@ -1,0 +1,19 @@
+Design Name: my_first_design
+Run Directory: /openlane/designs/my_first_design/runs/RUN_2025.04.27_18.41.48
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/my_first_design/runs/RUN_2025.04.27_18.41.48/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/my_first_design/runs/RUN_2025.04.27_18.41.48/logs/signoff/37-my_first_design.lef.lvs.log
+Number of nets: 43                         |Number of nets: 43                         
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/my_first_design/runs/RUN_2025.04.27_18.41.48/logs/signoff/40-arc.log
+Pin violations: 0
+Net violations: 0

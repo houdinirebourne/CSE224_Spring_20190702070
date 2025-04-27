@@ -1,0 +1,28 @@
+
+63. Printing statistics.
+
+=== my_first_design ===
+
+   Number of wires:                 11
+   Number of wire bits:             25
+   Number of public wires:           2
+   Number of public wire bits:      16
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 17
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__and2_2         2
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__buf_1          2
+     sky130_fd_sc_hd__buf_2          1
+     sky130_fd_sc_hd__nor2_2         2
+     sky130_fd_sc_hd__o21ai_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__or3_2          1
+     sky130_fd_sc_hd__or4_2          2
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         2
+
+   Chip area for module '\my_first_design': 152.646400
+
