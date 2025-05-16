@@ -1,0 +1,35 @@
+digraph "ALU" {
+label="ALU";
+rankdir="LR";
+remincross=true;
+n9 [ shape=octagon, label="out", color="black", fontcolor="black" ];
+n10 [ shape=octagon, label="opcode", color="black", fontcolor="black" ];
+n11 [ shape=octagon, label="B", color="black", fontcolor="black" ];
+n12 [ shape=octagon, label="A", color="black", fontcolor="black" ];
+c14 [ shape=record, label="{{<p12> A|<p11> B}|$7\n$xor|{<p13> Y}}",  ];
+c15 [ shape=record, label="{{<p12> A}|$6\n$not|{<p13> Y}}",  ];
+c16 [ shape=record, label="{{<p12> A|<p11> B}|$5\n$or|{<p13> Y}}",  ];
+c17 [ shape=record, label="{{<p12> A|<p11> B}|$4\n$and|{<p13> Y}}",  ];
+c18 [ shape=record, label="{{<p12> A|<p11> B}|$3\n$sub|{<p13> Y}}",  ];
+c19 [ shape=record, label="{{<p12> A|<p11> B}|$2\n$add|{<p13> Y}}",  ];
+p0 [shape=box, style=rounded, label="PROC $1\n/openlane/designs/my_second_design/src/ALU.v:8.1-18.8", ];
+c14:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n10:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n11:e -> c14:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n11:e -> c16:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n11:e -> c17:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n11:e -> c18:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n11:e -> c19:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c14:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c15:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c16:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c17:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c18:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n12:e -> c19:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c15:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c16:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c17:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c18:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c19:p13:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p0:e -> n9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+}

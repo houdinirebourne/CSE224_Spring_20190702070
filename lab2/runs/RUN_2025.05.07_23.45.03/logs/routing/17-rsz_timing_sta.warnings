@@ -1,0 +1,16 @@
+[WARNING STA-0366] port '__VIRTUAL_CLK__' not found.
+[WARNING STA-0419] transition time can not be specified for virtual clocks.
+[WARNING STA-0450] virtual clock __VIRTUAL_CLK__ can not be propagated.
+[WARNING GRT-0026] Missing route to pin _183_/Y.
+[WARNING GRT-0026] Missing route to pin _199_/B1.
+[WARNING GRT-0026] Missing route to pin _183_/B1.
+[WARNING GRT-0026] Missing route to pin _158_/A1.
+[WARNING GRT-0026] Missing route to pin _158_/A2.
+[WARNING GRT-0026] Missing route to pin _164_/B.
+[WARNING GRT-0026] Missing route to pin _183_/A1.
+[WARNING GRT-0026] Missing route to pin _134_/B.
+[WARNING GRT-0026] Missing route to pin _164_/A.
+[WARNING GRT-0026] Missing route to pin _183_/A2.
+[WARNING GRT-0026] Missing route to pin _199_/X.
+[WARNING GRT-0026] Missing route to pin _175_/B1.
+[WARNING] Did not save OpenROAD database!
