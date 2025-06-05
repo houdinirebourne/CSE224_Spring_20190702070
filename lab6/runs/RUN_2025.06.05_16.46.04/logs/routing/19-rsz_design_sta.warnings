@@ -1,0 +1,5 @@
+[WARNING GRT-0026] Missing route to pin _083_/D.
+[WARNING GRT-0026] Missing route to pin max_cap1/A.
+[WARNING GRT-0026] Missing route to pin _083_/Y.
+Warning: There are 7 unconstrained endpoints.
+[WARNING] Did not save OpenROAD database!

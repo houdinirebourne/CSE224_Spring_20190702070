@@ -1,0 +1,10 @@
+%Warning-UNUSEDSIGNAL: /openlane/designs/lab6/src/TopModule.v:13:10: Signal is not used: 'isImmediate'
+                                                                   : ... note: In instance 'TopModule'
+   13 |     wire isImmediate;
+      |          ^~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.018
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /openlane/designs/lab6/src/Decoder.v:2:18: Bits of signal are not used: 'instr'[13:5]
+                                                                : ... note: In instance 'TopModule.decoder'
+    2 |     input [31:0] instr,
+      |                  ^~~~~
