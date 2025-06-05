@@ -1,0 +1,17 @@
+%Warning-NULLPORT: /openlane/designs/lab5/src/TopModule.v:5:1: Null port on module (perhaps extraneous comma)
+    5 | );
+      | ^
+                   ... For warning description see https://verilator.org/warn/NULLPORT?v=5.018
+                   ... Use "/* verilator lint_off NULLPORT */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /openlane/designs/lab5/src/TopModule.v:5:1: Signal is not used: '__pinNumber4'
+                                                                 : ... note: In instance 'TopModule'
+    5 | );
+      | ^
+%Warning-UNUSEDSIGNAL: /openlane/designs/lab5/src/TopModule.v:11:10: Signal is not used: 'isImmediate'
+                                                                   : ... note: In instance 'TopModule'
+   11 |     wire isImmediate;
+      |          ^~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/lab5/src/Decoder.v:2:18: Bits of signal are not used: 'instr'[13:5]
+                                                                : ... note: In instance 'TopModule.decoder'
+    2 |     input [31:0] instr,
+      |                  ^~~~~

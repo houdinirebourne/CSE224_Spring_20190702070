@@ -1,0 +1,21 @@
+(DELAYFILE
+ (SDFVERSION "3.0")
+ (DESIGN "TopModule")
+ (DATE "Thu Jun  5 16:24:27 2025")
+ (VENDOR "Parallax")
+ (PROGRAM "STA")
+ (VERSION "2.5.0")
+ (DIVIDER .)
+ (VOLTAGE 1.800::1.800)
+ (PROCESS "1.000::1.000")
+ (TEMPERATURE 25.000::25.000)
+ (TIMESCALE 1ns)
+ (CELL
+  (CELLTYPE "TopModule")
+  (INSTANCE)
+  (DELAY
+   (ABSOLUTE
+   )
+  )
+ )
+)
