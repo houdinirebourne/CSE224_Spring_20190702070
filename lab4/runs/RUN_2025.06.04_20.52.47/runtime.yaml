@@ -1,0 +1,19 @@
+- status: 0 - openlane design prep
+  runtime_s: 7.15
+  runtime_ts: 0h0m7s152ms
+- status: 1 - synthesis - yosys
+  runtime_s: 11.44
+  runtime_ts: 0h0m11s435ms
+- status: 2 - sta - openroad
+  runtime_s: 2.53
+  runtime_ts: 0h0m2s525ms
+- status: 3 - floorplan initialization - openroad
+  runtime_s: 1.24
+  runtime_ts: 0h0m1s242ms
+---
+- status: routed
+  runtime_s: -1
+  runtime_ts: '-1'
+- status: flow failed
+  runtime_s: 25.0
+  runtime_ts: 0h0m25s0ms

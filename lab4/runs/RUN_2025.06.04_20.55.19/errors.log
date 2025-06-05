@@ -1,0 +1,61 @@
+[ERROR]: during executing openroad script /openlane/scripts/openroad/ioplacer.tcl
+[ERROR]: Log: designs/lab4/runs/RUN_2025.06.04_20.55.19/logs/floorplan/4-io.log
+[ERROR]: Last 10 lines:
+[INFO]: Setting output delay to: 2.0
+[INFO]: Setting input delay to: 2.0
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainty to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[INFO]: Setting timing derate to: 5.0 %
+Found 0 macro blocks.
+[ERROR PPL-0045] Layer met2 preferred direction is not horizontal.
+Error: ioplacer.tcl, 51 PPL-0045
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...
+[ERROR]: Step 4 (floorplan) failed with error:
+-code 1 -level 0 -errorstack {INNER {invokeStk1 throw_error} CALL {run_tcl_script -tool openroad -no_consume /openlane/scripts/openroad/ioplacer.tcl -indexed_log /openlane/designs/lab4/runs/RUN_2025.06.04_20.55.19/logs/floorplan/4-io.log -save to=/openlane/designs/lab4/runs/RUN_2025.06.04_20.55.19/tmp/floorplan,name=io,def,odb} CALL {run_openroad_script /openlane/scripts/openroad/ioplacer.tcl -indexed_log /openlane/designs/lab4/runs/RUN_2025.06.04_20.55.19/logs/floorplan/4-io.log -save to=/openlane/designs/lab4/runs/RUN_2025.06.04_20.55.19/tmp/floorplan,name=io,def,odb} CALL place_io CALL run_floorplan CALL {run_non_interactive_mode -design lab4}} -errorcode NONE -errorinfo {
+    while executing
+"throw_error"
+    (procedure "run_tcl_script" line 219)
+    invoked from within
+"run_tcl_script -tool openroad -no_consume {*}$args"
+    (procedure "run_openroad_script" line 2)
+    invoked from within
+"run_openroad_script $::env(SCRIPTS_DIR)/openroad/ioplacer.tcl -indexed_log $log -save "to=$arg_values(-outdir),name=$arg_values(-name),def,odb""
+    (procedure "place_io" line 19)
+    invoked from within
+"place_io"
+    (procedure "run_floorplan" line 34)
+    invoked from within
+"run_floorplan"} -errorline 1
+[ERROR]: Failed to create manufacturability and metric reports:
+[ERROR]: Traceback (most recent call last):
+  File "/openlane/scripts/generate_reports.py", line 184, in <module>
+    cli()
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/8ywrzlq8yyqrif2sfvbgg8vsxhj80ry7-python3-3.11.9-env/lib/python3.11/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openlane/scripts/generate_reports.py", line 51, in cli
+    report = Report(design, tag, design_name, params, run_path).get_report()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openlane/scripts/report/report.py", line 809, in get_report
+    *self.extract_all_values(),
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openlane/scripts/report/report.py", line 359, in extract_all_values
+    power_report = Artifact(
+                   ^^^^^^^^^
+  File "/openlane/scripts/report/report.py", line 62, in __init__
+    self.pathname = matches[0]
+                    ~~~~~~~^^^
+IndexError: list index out of range
+[ERROR]: Flow failed.

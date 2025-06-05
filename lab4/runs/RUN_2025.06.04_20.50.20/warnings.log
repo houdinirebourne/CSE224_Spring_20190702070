@@ -1,0 +1,8 @@
+[WARNING]: PNR_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: SIGNOFF_SDC_FILE is not set. It is recommended to write a custom SDC file for the design. Defaulting to BASE_SDC_FILE
+[WARNING]: You're using FP_IO_HMETAL in your configuration, which is a deprecated variable that will be removed in the future.
+[WARNING]: We recommend you update your configuration as follows:
+[WARNING]: 	set ::env(FP_IO_HLAYER) {met4}
+[WARNING]: You're using FP_IO_VMETAL in your configuration, which is a deprecated variable that will be removed in the future.
+[WARNING]: We recommend you update your configuration as follows:
+[WARNING]: 	set ::env(FP_IO_VLAYER) {met3}

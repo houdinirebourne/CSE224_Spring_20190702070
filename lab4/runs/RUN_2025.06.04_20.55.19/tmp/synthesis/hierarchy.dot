@@ -1,0 +1,29 @@
+digraph "top" {
+label="top";
+rankdir="LR";
+remincross=true;
+n1 [ shape=diamond, label="RD2", color="black", fontcolor="black" ];
+n2 [ shape=diamond, label="RD1", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="ALUResult", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="ALUOp", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="WD3", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="A3", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="A2", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="A1", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="WE3", color="black", fontcolor="black" ];
+n10 [ shape=octagon, label="CLK", color="black", fontcolor="black" ];
+c15 [ shape=record, label="{{<p11> in1|<p12> in2|<p13> opcode}|alu\nALU|{<p14> result}}",  ];
+c16 [ shape=record, label="{{<p8> A1|<p7> A2|<p6> A3|<p10> CLK|<p5> WD3|<p9> WE3}|regfile\nRegisterFile|{<p2> RD1|<p1> RD2}}",  ];
+c16:p1:e -> n1:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n1:e -> c15:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n10:e -> c16:p10:w [color="black", fontcolor="black", label=""];
+c16:p2:e -> n2:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n2:e -> c15:p11:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c15:p14:e -> n3:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n4:e -> c15:p13:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n5:e -> c16:p5:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n6:e -> c16:p6:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n7:e -> c16:p7:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n8:e -> c16:p8:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n9:e -> c16:p9:w [color="black", fontcolor="black", label=""];
+}
