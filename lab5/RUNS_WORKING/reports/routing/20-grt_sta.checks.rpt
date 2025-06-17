@@ -1,0 +1,145 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 67 unannotated drivers.
+ clk
+ control
+ reset
+ top_module_1/HI
+ top_module_1/LO
+ top_module_10/HI
+ top_module_10/LO
+ top_module_11/HI
+ top_module_11/LO
+ top_module_12/HI
+ top_module_12/LO
+ top_module_13/HI
+ top_module_13/LO
+ top_module_14/HI
+ top_module_14/LO
+ top_module_15/HI
+ top_module_15/LO
+ top_module_16/HI
+ top_module_16/LO
+ top_module_17/HI
+ top_module_17/LO
+ top_module_18/HI
+ top_module_18/LO
+ top_module_19/HI
+ top_module_19/LO
+ top_module_2/HI
+ top_module_2/LO
+ top_module_20/HI
+ top_module_20/LO
+ top_module_21/HI
+ top_module_21/LO
+ top_module_22/HI
+ top_module_22/LO
+ top_module_23/HI
+ top_module_23/LO
+ top_module_24/HI
+ top_module_24/LO
+ top_module_25/HI
+ top_module_25/LO
+ top_module_26/HI
+ top_module_26/LO
+ top_module_27/HI
+ top_module_27/LO
+ top_module_28/HI
+ top_module_28/LO
+ top_module_29/HI
+ top_module_29/LO
+ top_module_3/HI
+ top_module_3/LO
+ top_module_30/HI
+ top_module_30/LO
+ top_module_31/HI
+ top_module_31/LO
+ top_module_32/HI
+ top_module_32/LO
+ top_module_4/HI
+ top_module_4/LO
+ top_module_5/HI
+ top_module_5/LO
+ top_module_6/HI
+ top_module_6/LO
+ top_module_7/HI
+ top_module_7/LO
+ top_module_8/HI
+ top_module_8/LO
+ top_module_9/HI
+ top_module_9/LO
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 2 input ports missing set_input_delay.
+  control
+  reset
+Warning: There are 32 unconstrained endpoints.
+  result[0]
+  result[10]
+  result[11]
+  result[12]
+  result[13]
+  result[14]
+  result[15]
+  result[16]
+  result[17]
+  result[18]
+  result[19]
+  result[1]
+  result[20]
+  result[21]
+  result[22]
+  result[23]
+  result[24]
+  result[25]
+  result[26]
+  result[27]
+  result[28]
+  result[29]
+  result[2]
+  result[30]
+  result[31]
+  result[3]
+  result[4]
+  result[5]
+  result[6]
+  result[7]
+  result[8]
+  result[9]

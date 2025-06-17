@@ -1,0 +1,890 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Liberty frontend: /home/furkan/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /openlane/designs/project5/src/instruction_memory.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/instruction_memory.v' to AST representation.
+Storing AST representation for module `$abstract\instruction_memory'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /openlane/designs/project5/src/instruction_decoder.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/instruction_decoder.v' to AST representation.
+Storing AST representation for module `$abstract\instruction_decoder'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /openlane/designs/project5/src/pc.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/pc.v' to AST representation.
+Storing AST representation for module `$abstract\pc'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /openlane/designs/project5/src/register_file.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/register_file.v' to AST representation.
+Storing AST representation for module `$abstract\register_file'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /openlane/designs/project5/src/top_module.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/top_module.v' to AST representation.
+Storing AST representation for module `$abstract\top_module'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /openlane/designs/project5/src/alu.v
+Parsing SystemVerilog input from `/openlane/designs/project5/src/alu.v' to AST representation.
+Storing AST representation for module `$abstract\alu'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\top_module'.
+Generating RTLIL representation for module `\top_module'.
+
+9.1. Analyzing design hierarchy..
+Top module:  \top_module
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\alu'.
+Generating RTLIL representation for module `\alu'.
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\register_file'.
+Generating RTLIL representation for module `\register_file'.
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\instruction_decoder'.
+Generating RTLIL representation for module `\instruction_decoder'.
+
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\instruction_memory'.
+Generating RTLIL representation for module `\instruction_memory'.
+
+9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\pc'.
+Generating RTLIL representation for module `\pc'.
+
+9.7. Analyzing design hierarchy..
+Top module:  \top_module
+Used module:     \alu
+Used module:     \register_file
+Used module:     \instruction_decoder
+Used module:     \instruction_memory
+Used module:     \pc
+
+9.8. Analyzing design hierarchy..
+Top module:  \top_module
+Used module:     \alu
+Used module:     \register_file
+Used module:     \instruction_decoder
+Used module:     \instruction_memory
+Used module:     \pc
+Removing unused module `$abstract\alu'.
+Removing unused module `$abstract\top_module'.
+Removing unused module `$abstract\register_file'.
+Removing unused module `$abstract\pc'.
+Removing unused module `$abstract\instruction_decoder'.
+Removing unused module `$abstract\instruction_memory'.
+Removed 6 unused modules.
+
+10. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/project5/runs/RUN_2025.06.02_21.46.29/tmp/synthesis/hierarchy.dot'.
+Dumping module top_module to page 1.
+Renaming module top_module to top_module.
+
+11. Executing TRIBUF pass.
+
+12. Executing HIERARCHY pass (managing design hierarchy).
+
+12.1. Analyzing design hierarchy..
+Top module:  \top_module
+Used module:     \alu
+Used module:     \register_file
+Used module:     \instruction_decoder
+Used module:     \instruction_memory
+Used module:     \pc
+
+12.2. Analyzing design hierarchy..
+Top module:  \top_module
+Used module:     \alu
+Used module:     \register_file
+Used module:     \instruction_decoder
+Used module:     \instruction_memory
+Used module:     \pc
+Removed 0 unused modules.
+
+13. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+14. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/openlane/designs/project5/src/top_module.v:46$1 in module top_module.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/project5/src/top_module.v:46$1 in module top_module.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/project5/src/instruction_memory.v:2$19 in module instruction_memory.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/project5/src/register_file.v:16$12 in module register_file.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/project5/src/alu.v:7$2 in module alu.
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/project5/src/pc.v:2$20 in module pc.
+Removed a total of 1 dead cases.
+
+15. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 8 assignments to connections.
+
+16. Executing PROC_INIT pass (extract init attributes).
+
+17. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\pc.$proc$/openlane/designs/project5/src/pc.v:2$20'.
+
+18. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~5 debug messages>
+
+19. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+     1/3: $1\alu_input_b[31:0]
+     2/3: $1\reg_write[0:0]
+     3/3: $1\alu_op[2:0]
+Creating decoders for process `\instruction_memory.$proc$/openlane/designs/project5/src/instruction_memory.v:2$19'.
+     1/1: $1\instruction[31:0]
+Creating decoders for process `\register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+     1/3: $1$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$18
+     2/3: $1$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_DATA[31:0]$17
+     3/3: $1$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_ADDR[4:0]$16
+Creating decoders for process `\alu.$proc$/openlane/designs/project5/src/alu.v:7$2'.
+     1/1: $1\Result[31:0]
+Creating decoders for process `\pc.$proc$/openlane/designs/project5/src/pc.v:2$20'.
+     1/1: $0\pc_out[31:0]
+
+20. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\top_module.\alu_input_b' from process `\top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+No latch inferred for signal `\top_module.\reg_write' from process `\top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+No latch inferred for signal `\top_module.\alu_op' from process `\top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+No latch inferred for signal `\instruction_memory.\instruction' from process `\instruction_memory.$proc$/openlane/designs/project5/src/instruction_memory.v:2$19'.
+No latch inferred for signal `\alu.\Result' from process `\alu.$proc$/openlane/designs/project5/src/alu.v:7$2'.
+
+21. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\register_file.$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_ADDR' using process `\register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+  created $dff cell `$procdff$73' with positive edge clock.
+Creating register for signal `\register_file.$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_DATA' using process `\register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+  created $dff cell `$procdff$74' with positive edge clock.
+Creating register for signal `\register_file.$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN' using process `\register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+  created $dff cell `$procdff$75' with positive edge clock.
+Creating register for signal `\pc.\pc_out' using process `\pc.$proc$/openlane/designs/project5/src/pc.v:2$20'.
+  created $adff cell `$procdff$76' with positive edge clock and positive level reset.
+
+22. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+23. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+Removing empty process `top_module.$proc$/openlane/designs/project5/src/top_module.v:46$1'.
+Found and cleaned up 1 empty switch in `\instruction_memory.$proc$/openlane/designs/project5/src/instruction_memory.v:2$19'.
+Removing empty process `instruction_memory.$proc$/openlane/designs/project5/src/instruction_memory.v:2$19'.
+Found and cleaned up 1 empty switch in `\register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+Removing empty process `register_file.$proc$/openlane/designs/project5/src/register_file.v:16$12'.
+Found and cleaned up 1 empty switch in `\alu.$proc$/openlane/designs/project5/src/alu.v:7$2'.
+Removing empty process `alu.$proc$/openlane/designs/project5/src/alu.v:7$2'.
+Found and cleaned up 1 empty switch in `\pc.$proc$/openlane/designs/project5/src/pc.v:2$20'.
+Removing empty process `pc.$proc$/openlane/designs/project5/src/pc.v:2$20'.
+Cleaned up 5 empty switches.
+
+24. Executing CHECK pass (checking for obvious problems).
+Checking module top_module...
+Checking module instruction_memory...
+Checking module instruction_decoder...
+Checking module register_file...
+Checking module alu...
+Checking module pc...
+Found and reported 0 problems.
+
+25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+<suppressed ~3 debug messages>
+Optimizing module instruction_memory.
+<suppressed ~1 debug messages>
+Optimizing module instruction_decoder.
+Optimizing module register_file.
+Optimizing module alu.
+Optimizing module pc.
+
+26. Executing FLATTEN pass (flatten design).
+Deleting now unused module instruction_memory.
+Deleting now unused module instruction_decoder.
+Deleting now unused module register_file.
+Deleting now unused module alu.
+Deleting now unused module pc.
+<suppressed ~5 debug messages>
+
+27. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 3 unused cells and 31 unused wires.
+<suppressed ~4 debug messages>
+
+29. Executing OPT pass (performing simple optimizations).
+
+29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+<suppressed ~60 debug messages>
+Removed a total of 20 cells.
+
+29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+    Consolidated identical input bits for $mux cell $flatten\regfile.$procmux$55:
+      Old ports: A=0, B=32'11111111111111111111111111111111, Y=$flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15
+      New ports: A=1'0, B=1'1, Y=$flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0]
+      New connections: $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [31:1] = { $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] $flatten\regfile.$0$memwr$\registers$/openlane/designs/project5/src/register_file.v:18$9_EN[31:0]$15 [0] }
+    New ctrl vector for $pmux cell $procmux$22: { $procmux$29_CTRL $auto$opt_reduce.cc:134:opt_pmux$81 $auto$opt_reduce.cc:134:opt_pmux$79 }
+    New ctrl vector for $pmux cell $procmux$30: { $procmux$29_CTRL $auto$opt_reduce.cc:134:opt_pmux$83 }
+    New ctrl vector for $pmux cell $flatten\alu_unit.$procmux$64: { $flatten\alu_unit.$procmux$68_CMP $flatten\alu_unit.$procmux$67_CMP $auto$opt_reduce.cc:134:opt_pmux$87 $auto$opt_reduce.cc:134:opt_pmux$85 }
+  Optimizing cells in module \top_module.
+Performed a total of 4 changes.
+
+29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+29.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+29.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+29.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+29.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+29.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+29.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+29.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+29.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+29.16. Finished OPT passes. (There is nothing left to do.)
+
+30. Executing FSM pass (extract and optimize FSM).
+
+30.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+30.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+30.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+30.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+30.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+30.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+30.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+30.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+31. Executing OPT pass (performing simple optimizations).
+
+31.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+31.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+31.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+31.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+31.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+31.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\program_counter.$procdff$76 ($adff) from module top_module (D = $flatten\program_counter.$add$/openlane/designs/project5/src/pc.v:6$21_Y, Q = \program_counter.pc_out).
+
+31.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+31.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+31.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+31.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+31.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+31.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+31.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+31.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+31.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+31.16. Finished OPT passes. (There is nothing left to do.)
+
+32. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 3) from port B of cell top_module.$procmux$27_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top_module.$procmux$28_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell top_module.$procmux$29_CMP1 ($eq).
+Removed top 31 bits (of 32) from port B of cell top_module.$flatten\program_counter.$add$/openlane/designs/project5/src/pc.v:6$21 ($add).
+Removed top 31 bits (of 32) from port B of cell top_module.$flatten\imem.$procmux$52_CMP0 ($eq).
+Removed top 30 bits (of 32) from port B of cell top_module.$flatten\imem.$procmux$51_CMP0 ($eq).
+Removed top 30 bits (of 32) from port B of cell top_module.$flatten\imem.$procmux$50_CMP0 ($eq).
+Removed top 29 bits (of 32) from port B of cell top_module.$flatten\imem.$procmux$49_CMP0 ($eq).
+Removed top 3 bits (of 32) from mux cell top_module.$flatten\imem.$procmux$47 ($pmux).
+Removed top 29 bits (of 32) from port B of cell top_module.$flatten\imem.$procmux$48_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top_module.$flatten\alu_unit.$procmux$70_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell top_module.$flatten\alu_unit.$procmux$69_CMP0 ($eq).
+Removed top 2 bits (of 16) from wire top_module.immediate.
+Removed top 3 bits (of 32) from wire top_module.instruction.
+
+33. Executing PEEPOPT pass (run peephole optimizers).
+
+34. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+35. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top_module:
+  creating $macc model for $flatten\alu_unit.$add$/openlane/designs/project5/src/alu.v:13$7 ($add).
+  creating $macc model for $flatten\alu_unit.$sub$/openlane/designs/project5/src/alu.v:10$4 ($sub).
+  creating $macc model for $flatten\program_counter.$add$/openlane/designs/project5/src/pc.v:6$21 ($add).
+  creating $alu model for $macc $flatten\program_counter.$add$/openlane/designs/project5/src/pc.v:6$21.
+  creating $alu model for $macc $flatten\alu_unit.$sub$/openlane/designs/project5/src/alu.v:10$4.
+  creating $alu model for $macc $flatten\alu_unit.$add$/openlane/designs/project5/src/alu.v:13$7.
+  creating $alu cell for $flatten\alu_unit.$add$/openlane/designs/project5/src/alu.v:13$7: $auto$alumacc.cc:485:replace_alu$91
+  creating $alu cell for $flatten\alu_unit.$sub$/openlane/designs/project5/src/alu.v:10$4: $auto$alumacc.cc:485:replace_alu$94
+  creating $alu cell for $flatten\program_counter.$add$/openlane/designs/project5/src/pc.v:6$21: $auto$alumacc.cc:485:replace_alu$97
+  created 3 $alu and 0 $macc cells.
+
+36. Executing SHARE pass (SAT-based resource sharing).
+Found 4 cells in module top_module that may be considered for resource sharing.
+  Analyzing resource sharing options for $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11 ($memrd):
+    Found 4 activation_patterns using ctrl signal { $flatten\alu_unit.$procmux$68_CMP $flatten\alu_unit.$procmux$67_CMP $auto$opt_reduce.cc:134:opt_pmux$81 $auto$opt_reduce.cc:134:opt_pmux$85 $auto$opt_reduce.cc:134:opt_pmux$87 }.
+    Found 1 candidates: $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10
+    Analyzing resource sharing with $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10 ($memrd):
+      Found 4 activation_patterns using ctrl signal { $flatten\alu_unit.$procmux$68_CMP $flatten\alu_unit.$procmux$67_CMP $auto$opt_reduce.cc:134:opt_pmux$85 $auto$opt_reduce.cc:134:opt_pmux$87 }.
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11: { $auto$opt_reduce.cc:134:opt_pmux$81 $auto$opt_reduce.cc:134:opt_pmux$85 } = 2'11
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11: { $flatten\alu_unit.$procmux$67_CMP $auto$opt_reduce.cc:134:opt_pmux$81 } = 2'11
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11: { $flatten\alu_unit.$procmux$68_CMP $auto$opt_reduce.cc:134:opt_pmux$81 } = 2'11
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11: { $auto$opt_reduce.cc:134:opt_pmux$81 $auto$opt_reduce.cc:134:opt_pmux$87 } = 2'11
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10: $auto$opt_reduce.cc:134:opt_pmux$87 = 1'1
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10: $flatten\alu_unit.$procmux$68_CMP = 1'1
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10: $flatten\alu_unit.$procmux$67_CMP = 1'1
+      Activation pattern for cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10: $auto$opt_reduce.cc:134:opt_pmux$85 = 1'1
+      According to the SAT solver the cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11 is never active. Sharing is pointless, we simply remove it.
+  Analyzing resource sharing options for $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:13$10 ($memrd):
+    Found 4 activation_patterns using ctrl signal { $flatten\alu_unit.$procmux$68_CMP $flatten\alu_unit.$procmux$67_CMP $auto$opt_reduce.cc:134:opt_pmux$85 $auto$opt_reduce.cc:134:opt_pmux$87 }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu_unit.$shr$/openlane/designs/project5/src/alu.v:12$6 ($shr):
+    Found 1 activation_patterns using ctrl signal $flatten\alu_unit.$procmux$67_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\alu_unit.$shl$/openlane/designs/project5/src/alu.v:11$5 ($shl):
+    Found 1 activation_patterns using ctrl signal $flatten\alu_unit.$procmux$68_CMP.
+    No candidates found.
+Removing 1 cells in module top_module:
+  Removing cell $flatten\regfile.$memrd$\registers$/openlane/designs/project5/src/register_file.v:14$11 ($memrd).
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+<suppressed ~31 debug messages>
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+37.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/4 on $pmux $procmux$22.
+    dead port 2/4 on $pmux $procmux$22.
+    dead port 4/4 on $pmux $procmux$22.
+    dead port 1/5 on $pmux $flatten\alu_unit.$procmux$64.
+    dead port 2/5 on $pmux $flatten\alu_unit.$procmux$64.
+    dead port 3/5 on $pmux $flatten\alu_unit.$procmux$64.
+    dead port 4/5 on $pmux $flatten\alu_unit.$procmux$64.
+Removed 7 multiplexer ports.
+<suppressed ~3 debug messages>
+
+37.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+37.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+37.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 15 unused cells and 45 unused wires.
+<suppressed ~23 debug messages>
+
+37.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+37.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+37.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+37.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+37.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+37.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+37.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+37.16. Finished OPT passes. (There is nothing left to do.)
+
+38. Executing MEMORY pass.
+
+38.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+38.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+38.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+38.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+38.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+38.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+38.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+38.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+38.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+38.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+39. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+<suppressed ~5 debug messages>
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+40.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+40.5. Finished fast OPT passes.
+
+41. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+42. Executing OPT pass (performing simple optimizations).
+
+42.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+42.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+42.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+42.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+42.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+42.6. Executing OPT_SHARE pass.
+
+42.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+42.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+42.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+42.10. Finished OPT passes. (There is nothing left to do.)
+
+43. Executing TECHMAP pass (map to technology primitives).
+
+43.1. Executing Verilog-2005 frontend: /nix/store/sx2v0i73mn1ih2z1nk61pm9n5gjgpidy-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/sx2v0i73mn1ih2z1nk61pm9n5gjgpidy-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+43.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~73 debug messages>
+
+44. Executing OPT pass (performing simple optimizations).
+
+44.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+44.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+44.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+44.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+44.5. Finished fast OPT passes.
+
+45. Executing ABC pass (technology mapping using ABC).
+
+45.1. Extracting gate netlist of module `\top_module' to `<abc-temp-dir>/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+46. Executing OPT pass (performing simple optimizations).
+
+46.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+46.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+46.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+46.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+46.5. Finished fast OPT passes.
+
+47. Executing HIERARCHY pass (managing design hierarchy).
+
+47.1. Analyzing design hierarchy..
+Top module:  \top_module
+
+47.2. Analyzing design hierarchy..
+Top module:  \top_module
+Removed 0 unused modules.
+
+48. Printing statistics.
+
+=== top_module ===
+
+   Number of wires:                 35
+   Number of wire bits:            445
+   Number of public wires:          35
+   Number of public wire bits:     445
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+49. Executing CHECK pass (checking for obvious problems).
+Checking module top_module...
+Found and reported 0 problems.
+
+50. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/project5/runs/RUN_2025.06.02_21.46.29/tmp/synthesis/post_techmap.dot'.
+Dumping module top_module to page 1.
+
+51. Executing SHARE pass (SAT-based resource sharing).
+
+52. Executing OPT pass (performing simple optimizations).
+
+52.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+52.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+52.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top_module..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+52.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top_module.
+Performed a total of 0 changes.
+
+52.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top_module'.
+Removed a total of 0 cells.
+
+52.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+52.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+
+52.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top_module.
+
+52.9. Finished OPT passes. (There is nothing left to do.)
+
+53. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 0 unused cells and 31 unused wires.
+<suppressed ~31 debug messages>
+
+54. Printing statistics.
+
+=== top_module ===
+
+   Number of wires:                  4
+   Number of wire bits:             35
+   Number of public wires:           4
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+mapping tbuf
+
+55. Executing TECHMAP pass (map to technology primitives).
+
+55.1. Executing Verilog-2005 frontend: /home/furkan/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/furkan/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+55.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+56. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+57. Executing TECHMAP pass (map to technology primitives).
+
+57.1. Executing Verilog-2005 frontend: /home/furkan/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/furkan/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+57.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+58. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+59. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+59.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\top_module':
+
+60. Printing statistics.
+
+=== top_module ===
+
+   Number of wires:                  4
+   Number of wire bits:             35
+   Number of public wires:           4
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  0
+
+[INFO]: USING STRATEGY AREA 0
+
+61. Executing ABC pass (technology mapping using ABC).
+
+61.1. Extracting gate netlist of module `\top_module' to `/tmp/yosys-abc-jdRB2u/input.blif'..
+Extracted 0 gates and 0 wires to a netlist network with 0 inputs and 0 outputs.
+Don't call ABC as there is nothing to map.
+Removing temp directory.
+
+62. Executing SETUNDEF pass (replace undef values with defined constants).
+
+63. Executing HILOMAP pass (mapping to constant drivers).
+
+64. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+65. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top_module..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~1 debug messages>
+
+66. Executing INSBUF pass (insert buffer cells for connected wires).
+
+67. Executing CHECK pass (checking for obvious problems).
+Checking module top_module...
+Found and reported 0 problems.
+
+68. Printing statistics.
+
+=== top_module ===
+
+   Number of wires:                  4
+   Number of wire bits:             35
+   Number of public wires:           4
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     sky130_fd_sc_hd__conb_1        32
+
+   Chip area for module '\top_module': 120.115200
+
+69. Executing Verilog backend.
+Dumping module `\top_module'.
+
+70. Executing JSON backend.
+
+End of script. Logfile hash: c346f800ae, CPU: user 0.34s system 0.04s, MEM: 42.88 MB peak
+Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
+Time spent: 36% 2x read_liberty (0 sec), 15% 4x stat (0 sec), ...

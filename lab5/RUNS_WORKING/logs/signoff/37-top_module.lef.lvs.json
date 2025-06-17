@@ -1,0 +1,234 @@
+[
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB"
+      ], [
+        "VPWR",
+        "VGND",
+        "VPB",
+        "VNB"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "LO"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR",
+        "LO"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VPWR"
+      ], [
+        "VGND",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ], [
+        "VGND",
+        "VNB",
+        "VPB",
+        "VPWR"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "top_module",
+      "top_module"
+   ],
+   "devices": [
+       [
+         ["sky130_fd_sc_hd__decap_6", 1],
+         ["sky130_ef_sc_hd__decap_12", 1],
+         ["sky130_fd_sc_hd__conb_1", 32],
+         ["sky130_fd_sc_hd__fill_1", 1],
+         ["sky130_fd_sc_hd__tapvpwrvgnd_1", 1],
+         ["sky130_fd_sc_hd__decap_4", 1],
+         ["sky130_fd_sc_hd__decap_3", 1],
+         ["sky130_fd_sc_hd__decap_8", 1 ]
+       ], [
+         ["sky130_fd_sc_hd__decap_6", 1 ],
+         ["sky130_ef_sc_hd__decap_12", 1 ],
+         ["sky130_fd_sc_hd__conb_1", 32 ],
+         ["sky130_fd_sc_hd__fill_1", 1 ],
+         ["sky130_fd_sc_hd__tapvpwrvgnd_1", 1 ],
+         ["sky130_fd_sc_hd__decap_4", 1 ],
+         ["sky130_fd_sc_hd__decap_3", 1 ],
+         ["sky130_fd_sc_hd__decap_8", 1 ]
+       ]
+   ],
+   "nets": [
+    66,
+    66
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "result[5]",
+        "result[4]",
+        "result[3]",
+        "result[2]",
+        "result[1]",
+        "result[0]",
+        "result[18]",
+        "result[28]",
+        "result[17]",
+        "result[16]",
+        "result[27]",
+        "result[15]",
+        "result[26]",
+        "result[14]",
+        "result[25]",
+        "result[13]",
+        "result[24]",
+        "result[23]",
+        "result[12]",
+        "result[22]",
+        "result[11]",
+        "result[10]",
+        "result[21]",
+        "result[31]",
+        "result[9]",
+        "result[20]",
+        "result[19]",
+        "result[30]",
+        "result[29]",
+        "result[8]",
+        "result[7]",
+        "result[6]",
+        "VGND",
+        "VPWR",
+        "clk",
+        "control",
+        "reset"
+      ], [
+        "result[5]",
+        "result[4]",
+        "result[3]",
+        "result[2]",
+        "result[1]",
+        "result[0]",
+        "result[18]",
+        "result[28]",
+        "result[17]",
+        "result[16]",
+        "result[27]",
+        "result[15]",
+        "result[26]",
+        "result[14]",
+        "result[25]",
+        "result[13]",
+        "result[24]",
+        "result[23]",
+        "result[12]",
+        "result[22]",
+        "result[11]",
+        "result[10]",
+        "result[21]",
+        "result[31]",
+        "result[9]",
+        "result[20]",
+        "result[19]",
+        "result[30]",
+        "result[29]",
+        "result[8]",
+        "result[7]",
+        "result[6]",
+        "VGND",
+        "VPWR",
+        "clk",
+        "control",
+        "reset"
+      ]
+   ]
+  }
+]

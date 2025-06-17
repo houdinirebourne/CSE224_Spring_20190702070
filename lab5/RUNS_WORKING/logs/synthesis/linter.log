@@ -1,0 +1,6 @@
+%Warning-WIDTHEXPAND: /openlane/designs/project5/src/instruction_decoder.v:13:20: Operator ASSIGNW expects 16 bits on the Assign RHS, but Assign RHS's SEL generates 14 bits.
+                                                                                : ... note: In instance 'top_module.decoder'
+   13 |   assign immediate = instruction[13:0];
+      |                    ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.018
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
